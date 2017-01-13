@@ -4,9 +4,11 @@ namespace DivineOmega\DCOM;
 
 use Exception;
 
+use mysqli;
+
 abstract class DCOM
 {
-    private static $envPrefix = DCOM;
+    private static $envPrefix = 'DCOM';
     private static $connections = [];
 
     public static function getConnection($name)
