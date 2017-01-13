@@ -39,9 +39,9 @@ abstract class DCOM
                     throw new Exception("Failed to connect to MySQL: (".$mysqli->connect_errno.") ".$mysqli->connect_error);
                 }
 
-                self::$connections[$name] = $mysql;
+                self::$connections[$name] = $mysqli;
 
-                return $mysql;
+                return $mysqli;
 
                 break;
 
