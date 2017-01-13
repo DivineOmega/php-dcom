@@ -11,8 +11,8 @@ abstract class DCOM
 
     public static function getConnection($name)
     {
-        if (array_key_exists($name, $this->connections)) {
-            return $this->connections[$name];
+        if (array_key_exists($name, self::$connections)) {
+            return self::connections[$name];
         }
 
         $objType = self::getEnvVar($name, 'object_type');
