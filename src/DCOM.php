@@ -12,7 +12,7 @@ abstract class DCOM
     public static function getConnection($name)
     {
         if (array_key_exists($name, self::$connections)) {
-            return self::connections[$name];
+            return self::$connections[$name];
         }
 
         $objType = self::getEnvVar($name, 'object_type');
@@ -59,5 +59,7 @@ abstract class DCOM
         if (!$value) {
             throw new Exception('Empty or non-existant environment variable: \''.$varName.'\'. Please ensure it exists in your `.env` file.');
         }
+
+        return $value;
     }
 }
