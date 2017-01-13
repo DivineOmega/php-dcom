@@ -1,6 +1,6 @@
 {
 
     "require": {
-        "DivineOmega/php-dcom": "dev-master"
+        "DivineOmega/php-dcom": "1.*"
     }
 }
