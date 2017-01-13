@@ -6,8 +6,8 @@ use Exception;
 
 abstract class DCOM
 {
-    private $envPrefix = DCOM;
-    private $connections = [];
+    private static $envPrefix = DCOM;
+    private static $connections = [];
 
     public static function getConnection($name)
     {
