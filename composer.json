@@ -6,8 +6,7 @@
     "homepage": "https://github.com/DivineOmega/php-dcom",
     "license": "LGPL3",
     "require": {
-        "php": ">=5.5.9",
-        "DivineOmega/dotenv-loader": "1.*"
+        "php": ">=5.5.9"
     },
     "autoload": {
         "psr-4": {
