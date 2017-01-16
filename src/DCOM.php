@@ -5,6 +5,7 @@ namespace DivineOmega\DCOM;
 use Exception;
 
 use mysqli;
+use PDO;
 
 abstract class DCOM
 {
@@ -42,6 +43,33 @@ abstract class DCOM
                 self::$connections[$name] = $mysqli;
 
                 return $mysqli;
+
+                break;
+
+            case 'pdo':
+
+                $availableDrivers = PDO::getAvailableDrivers();
+
+                if (!in_array($dbType, $availableDrivers)) {
+                    throw new Exception('PDO on this server does not support the requested database type. Change your database type to one the following: '.implode(', ', $availableDrivers));
+                }
+
+                $dbHost = self::getEnvVar($name, 'database_host');
+                $dbUsername = self::getEnvVar($name, 'database_username');
+                $dbPassword = self::getEnvVar($name, 'database_password');
+                $dbName = self::getEnvVar($name, 'database_name');
+
+                $dsn = $dbType.':dbname='.$dbName.';host='.$dbHost;
+
+                try {
+                    $pdo = new PDO($dsn, $dbUsername, $dbPassword);
+                } catch (PDOException $e) {
+                    echo 'Failed to connect to database (via PDO): ' . $e->getMessage();
+                }
+
+                self::$connections[$name] = $pdo;
+
+                return $pdo;
 
                 break;
 
