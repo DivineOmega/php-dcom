@@ -24,8 +24,11 @@ DCOM_MAIN_DATABASE_PASSWORD=password
 DCOM_MAIN_DATABASE_NAME=testdb
 ```
 
-You can then establish a connection to the database, as shown below. DCOM will
-ensure your application only uses a single connection to each database per request.
+DCOM supports the creation of both `mysqli` and `pdo` objects.
+
+After setting up your `.env` file, you can then establish a connection to the 
+database, as shown below. DCOM will ensure your application only uses a 
+single connection to each database per request.
 
 ```php
 require 'vendor/autoload.php';
