@@ -8,9 +8,16 @@ file in the root of your project.
 
 Simple run `composer require DivineOmega/php-dcom` to install.
 
+You will need to set environment variables to use this library. If you are not using a
+framework that allows you to set these easily, you can install the `dotenv-loader` 
+package will will immediately allow do so via a `.env` file.
+
+To install `dotenv-loader`, just run: `composer require DivineOmega/dotenv-loader`.
+
 ## Usage
 
-You need to create a `.env` file in the root of your project (alongside your 
+These usage instructions assume you are able to set environment variables via a `.env`
+file. If needed, create a `.env` file in the root of your project (alongside your 
 `composer.json` file). This will be used to store you database connection details,
 in the following format.
 
