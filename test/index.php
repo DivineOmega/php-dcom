@@ -14,7 +14,7 @@ while ($row = $result->fetch_assoc()) {
 
 // PDO
 
-$pdo = DCOM::getConnection("main");
+$pdo = DCOM::getConnection("secondary");
 foreach ($pdo->query('select * from media limit 1') as $row) {
     var_dump($row);
 }
