@@ -10,7 +10,7 @@ Simple run `composer require DivineOmega/php-dcom` to install.
 
 You will need to set environment variables to use this library. If you are not using a
 framework that allows you to set these easily, you can install the `dotenv-loader` 
-package will will immediately allow do so via a `.env` file.
+package which will immediately allow do so via a `.env` file.
 
 To install `dotenv-loader`, just run: `composer require DivineOmega/dotenv-loader`.
 
