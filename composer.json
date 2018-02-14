@@ -4,7 +4,7 @@
     "description": "PHP Database Connection Object Manager",
     "keywords": ["database connections", "database", "mysqli", "pdo", "PHP", "PHP library", "database connection PHP library"],
     "homepage": "https://github.com/DivineOmega/php-dcom",
-    "license": "LGPL3",
+    "license": "LGPL-3.0-only",
     "require": {
         "php": ">=5.5.9"
     },
